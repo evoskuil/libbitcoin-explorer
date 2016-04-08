@@ -10,7 +10,7 @@
     <PlatformToolset>v120</PlatformToolset>
     <ProjectGuid>{1A0E5EDD-E803-4268-9DFB-044EB80BB0F1}</ProjectGuid>
     <ProjectName>libbitcoin-explorer-test</ProjectName>
-    <NuGetPackageImportStamp>33c8b624</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>402c4d82</NuGetPackageImportStamp>
   </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="DebugDEXE|Win32">
@@ -70,116 +70,7 @@
     <Import Project="$(ProjectDir)$(ProjectName).props" />
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\test\primitives\address.cpp" />
-    <ClCompile Include="..\..\..\..\test\primitives\base58.cpp" />
-    <ClCompile Include="..\..\..\..\test\generated__broadcast.cpp" />
-    <ClCompile Include="..\..\..\..\test\generated__find.cpp" />
-    <ClCompile Include="..\..\..\..\test\generated__formerly.cpp" />
-    <ClCompile Include="..\..\..\..\test\generated__symbol.cpp" />
-    <ClCompile Include="..\..\..\..\test\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\test\commands\address-decode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\address-embed.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\address-encode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\address-validate.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\base16-decode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\base16-encode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\base58-decode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\base58-encode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\base58check-decode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\base58check-encode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\base64-decode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\base64-encode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\bci-fetch-last-height.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\bci-history.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\bitcoin160.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\bitcoin256.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\blke-fetch-transaction.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\btc-to-satoshi.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\cert-new.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\cert-public.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\ec-add.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\ec-add-secrets.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\ec-lock.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\ec-multiply.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\ec-multiply-secrets.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\ec-new.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\ec-to-address.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\ec-to-public.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\ec-to-wif.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\ec-unlock.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\fetch-balance.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\fetch-header.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\fetch-height.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\fetch-history.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\fetch-public-key.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\fetch-stealth.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\fetch-tx.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\fetch-tx-index.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\fetch-utxo.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\genaddr.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\genpriv.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\genpub.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\hd-new.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\hd-private.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\hd-public.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\hd-to-address.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\hd-to-ec.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\hd-to-public.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\hd-to-wif.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\help.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\initchain.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\input-set.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\input-sign.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\input-validate.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\message-sign.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\message-validate.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\mnemonic-decode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\mnemonic-encode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\mnemonic-new.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\mnemonic-to-seed.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\mpk.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\newseed.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\qrcode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\ripemd160.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\satoshi-to-btc.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\script-decode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\script-encode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\script-to-address.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\seed.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\send-tx.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\send-tx-node.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\send-tx-p2p.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\sendtx-bci.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\settings.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\sha160.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\sha256.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\sha512.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\showblkhead.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\stealth-decode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\stealth-encode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\stealth-initiate.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\stealth-newkey.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\stealth-public.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\stealth-secret.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\stealth-shared.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\tx-decode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\tx-encode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\tx-sign.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\uri-decode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\uri-encode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\validate-tx.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\wallet.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\watch-address.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\watch-tx.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\wif-to-ec.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\wif-to-public.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\wrap-decode.cpp" />
-    <ClCompile Include="..\..\..\..\test\commands\wrap-encode.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\test\commands\command.hpp" />
+    <ClCompile Include="..\..\..\..\test\dealer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -196,10 +87,6 @@
     <Import Project="..\..\..\..\..\..\nuget\boost_regex-vc120.1.56.0.0\build\native\boost_regex-vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\boost_regex-vc120.1.56.0.0\build\native\boost_regex-vc120.targets')" />
     <Import Project="..\..\..\..\..\..\nuget\boost_system-vc120.1.56.0.0\build\native\boost_system-vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\boost_system-vc120.1.56.0.0\build\native\boost_system-vc120.targets')" />
     <Import Project="..\..\..\..\..\..\nuget\boost_unit_test_framework-vc120.1.56.0.0\build\native\boost_unit_test_framework-vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\boost_unit_test_framework-vc120.1.56.0.0\build\native\boost_unit_test_framework-vc120.targets')" />
-    <Import Project="..\..\..\..\..\..\nuget\czmq_vc120.3.0.1.0\build\native\czmq_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\czmq_vc120.3.0.1.0\build\native\czmq_vc120.targets')" />
-    <Import Project="..\..\..\..\..\..\nuget\czmqpp_vc120.1.1.0.0\build\native\czmqpp_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\czmqpp_vc120.1.1.0.0\build\native\czmqpp_vc120.targets')" />
-    <Import Project="..\..\..\..\..\..\nuget\libsodium_vc120.1.0.0.0\build\native\libsodium_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\libsodium_vc120.1.0.0.0\build\native\libsodium_vc120.targets')" />
-    <Import Project="..\..\..\..\..\..\nuget\libzmq_vc120.4.2.0.0\build\native\libzmq_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\libzmq_vc120.4.2.0.0\build\native\libzmq_vc120.targets')" />
     <Import Project="..\..\..\..\..\..\nuget\secp256k1_vc120.0.1.0.13\build\native\secp256k1_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\secp256k1_vc120.0.1.0.13\build\native\secp256k1_vc120.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -215,10 +102,6 @@
     <Error Condition="!Exists('..\..\..\..\..\..\nuget\boost_regex-vc120.1.56.0.0\build\native\boost_regex-vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\boost_regex-vc120.1.56.0.0\build\native\boost_regex-vc120.targets'))" />
     <Error Condition="!Exists('..\..\..\..\..\..\nuget\boost_system-vc120.1.56.0.0\build\native\boost_system-vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\boost_system-vc120.1.56.0.0\build\native\boost_system-vc120.targets'))" />
     <Error Condition="!Exists('..\..\..\..\..\..\nuget\boost_unit_test_framework-vc120.1.56.0.0\build\native\boost_unit_test_framework-vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\boost_unit_test_framework-vc120.1.56.0.0\build\native\boost_unit_test_framework-vc120.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\..\nuget\czmq_vc120.3.0.1.0\build\native\czmq_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\czmq_vc120.3.0.1.0\build\native\czmq_vc120.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\..\nuget\czmqpp_vc120.1.1.0.0\build\native\czmqpp_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\czmqpp_vc120.1.1.0.0\build\native\czmqpp_vc120.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\..\nuget\libsodium_vc120.1.0.0.0\build\native\libsodium_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\libsodium_vc120.1.0.0.0\build\native\libsodium_vc120.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\..\nuget\libzmq_vc120.4.2.0.0\build\native\libzmq_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\libzmq_vc120.4.2.0.0\build\native\libzmq_vc120.targets'))" />
     <Error Condition="!Exists('..\..\..\..\..\..\nuget\secp256k1_vc120.0.1.0.13\build\native\secp256k1_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\secp256k1_vc120.0.1.0.13\build\native\secp256k1_vc120.targets'))" />
   </Target>
   <ItemGroup>

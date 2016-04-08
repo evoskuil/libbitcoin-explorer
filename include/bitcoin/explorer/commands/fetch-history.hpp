@@ -146,7 +146,7 @@ public:
         (
             BX_HELP_VARIABLE ",h",
             value<bool>()->zero_tokens(),
-            "Get a description and instructions for this command."
+            "Get a description and instructions for this commandX."
         )
         (
             BX_CONFIG_VARIABLE ",c",
