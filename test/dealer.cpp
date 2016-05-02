@@ -8,11 +8,15 @@ int main()
     czmqpp::socket socket(context, ZMQ_DEALER);
     assert(socket.self() != nullptr);
 
-    static const auto public_key = "rq:rM>}U?@Lns47E1%kR.o@n%FcmmsL/@{H8]yf7";
-    //static const auto secret_key = "JTKVSB%%)wK0E.X)V>+}o?pNmC{O&4W4b!Ni{Lh6";
+    // This was missing from libbitcoin-client.
+    // Note that a specific client *certificate* is not required for this.
+    czmqpp::certificate certificate;
+    assert(certificate.valid());
+    certificate.apply(socket);
 
-    zmq_setsockopt(socket.self(), ZMQ_CURVE_SERVERKEY, public_key, strlen(public_key));
-    //socket.set_curve_serverkey(public_key);
+    static const auto public_key = "rq:rM>}U?@Lns47E1%kR.o@n%FcmmsL/@{H8]yf7";
+    socket.set_curve_serverkey(public_key);
+    ////zmq_setsockopt(socket.self(), ZMQ_CURVE_SERVERKEY, public_key, strlen(public_key));
 
     auto connected = socket.connect("tcp://localhost:9091");
     assert(connected == 0);
