@@ -87,7 +87,6 @@ src_libbitcoin_explorer_la_SOURCES = \
     src/commands/electrum-decode.cpp \
     src/commands/electrum-new.cpp \
     src/commands/electrum-to-seed.cpp \
-    src/commands/entropy.cpp \
     src/commands/fetch-balance.cpp \
     src/commands/fetch-block-hashes.cpp \
     src/commands/fetch-block-height.cpp \
@@ -247,7 +246,6 @@ test_libbitcoin_explorer_test_SOURCES = \
     test/commands/electrum-decode.cpp \
     test/commands/electrum-new.cpp \
     test/commands/electrum-to-seed.cpp \
-    test/commands/entropy.cpp \
     test/commands/fetch-balance.cpp \
     test/commands/fetch-block.cpp \
     test/commands/fetch-header.cpp \
@@ -384,7 +382,6 @@ include_bitcoin_explorer_commands_HEADERS = \
     include/bitcoin/explorer/commands/electrum-decode.hpp \
     include/bitcoin/explorer/commands/electrum-new.hpp \
     include/bitcoin/explorer/commands/electrum-to-seed.hpp \
-    include/bitcoin/explorer/commands/entropy.hpp \
     include/bitcoin/explorer/commands/fetch-balance.hpp \
     include/bitcoin/explorer/commands/fetch-block-hashes.hpp \
     include/bitcoin/explorer/commands/fetch-block-height.hpp \
