@@ -1,5 +1,5 @@
 ###############################################################################
-#  Copyright (c) 2014-2023 libbitcoin-explorer developers (see COPYING).
+#  Copyright (c) 2014-2025 libbitcoin-explorer developers (see COPYING).
 #
 #         GENERATED SOURCE CODE, DO NOT EDIT EXCEPT EXPERIMENTALLY
 #
@@ -32,6 +32,8 @@ else ()
   set( exec_prefix "\${prefix}" )
   set( libdir "\${exec_prefix}/lib" )
   set( includedir "\${exec_prefix}/include" )
+
+  set( CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib" )
 
   set( PACKAGE_VERSION "4.0.0" )
   set( VERSION "${PACKAGE_VERSION}" )
@@ -154,7 +156,7 @@ endif()
 
 # Find boost
 #------------------------------------------------------------------------------
-find_package( Boost 1.76.0 REQUIRED COMPONENTS
+find_package( Boost 1.86.0 REQUIRED COMPONENTS
     unit_test_framework )
 
 set( boost_unit_test_framework_LIBS "-lboost_unit_test_framework" )
