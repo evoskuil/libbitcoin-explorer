@@ -24,7 +24,7 @@ Version: @PACKAGE_VERSION@
 #==============================================================================
 # Dependencies that publish package configuration.
 #------------------------------------------------------------------------------
-Requires: libbitcoin-client >= 4.0.0 libbitcoin-network >= 4.0.0
+Requires: libbitcoin-network >= 4.0.0
 
 # Include directory and any other required compiler flags.
 #------------------------------------------------------------------------------

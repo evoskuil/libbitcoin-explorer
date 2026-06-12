@@ -291,27 +291,6 @@ AS_CASE([${enable_isystem}],[yes],
 
 AC_MSG_NOTICE([bash_completion_BUILD_CPPFLAGS : ${bash_completion_BUILD_CPPFLAGS}])
 
-# Require bitcoin-client of at least version 4.0.0 and output ${bitcoin_client_CPPFLAGS/LIBS/PKG}.
-#------------------------------------------------------------------------------
-PKG_CHECK_MODULES([bitcoin_client], [libbitcoin-client >= 4.0.0], [],
-    [
-      AC_MSG_ERROR([libbitcoin-client >= 4.0.0 is required but was not found.])
-    ])
-AC_SUBST([bitcoin_client_PKG], ['libbitcoin-client >= 4.0.0'])
-AC_SUBST([bitcoin_client_CPPFLAGS], [${bitcoin_client_CFLAGS}])
-AC_SUBST([bitcoin_client_ISYS_CPPFLAGS], [`echo ${bitcoin_client_CPPFLAGS} | $SED s/^-I/-isystem/g | $SED s/' -I'/' -isystem'/g`]])
-AC_MSG_NOTICE([bitcoin_client_CPPFLAGS : ${bitcoin_client_CPPFLAGS}])
-AC_MSG_NOTICE([bitcoin_client_ISYS_CPPFLAGS : ${bitcoin_client_ISYS_CPPFLAGS}])
-AC_MSG_NOTICE([bitcoin_client_OTHER_CFLAGS : ${bitcoin_client_OTHER_CFLAGS}])
-AC_MSG_NOTICE([bitcoin_client_INCLUDEDIR : ${bitcoin_client_INCLUDEDIR}])
-AC_MSG_NOTICE([bitcoin_client_LIBS : ${bitcoin_client_LIBS}])
-
-AS_CASE([${enable_isystem}],[yes],
-    [AC_SUBST([bitcoin_client_BUILD_CPPFLAGS], [${bitcoin_client_ISYS_CPPFLAGS}])],
-    [AC_SUBST([bitcoin_client_BUILD_CPPFLAGS], [${bitcoin_client_CPPFLAGS}])])
-
-AC_MSG_NOTICE([bitcoin_client_BUILD_CPPFLAGS : ${bitcoin_client_BUILD_CPPFLAGS}])
-
 # Require bitcoin-network of at least version 4.0.0 and output ${bitcoin_network_CPPFLAGS/LIBS/PKG}.
 #------------------------------------------------------------------------------
 PKG_CHECK_MODULES([bitcoin_network], [libbitcoin-network >= 4.0.0], [],
