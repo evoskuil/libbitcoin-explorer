@@ -370,15 +370,12 @@ check_PROGRAMS = test/libbitcoin-explorer-test
 test_libbitcoin_explorer_test_CPPFLAGS = \
     -I${top_builddir}/test \
     -I${srcdir}/../../test \
-    ${boost_BUILD_CPPFLAGS} \
     ${src_libbitcoin_explorer_la_CPPFLAGS}
 
 test_libbitcoin_explorer_test_LDFLAGS = \
-    ${boost_LDFLAGS} \
     ${src_libbitcoin_explorer_la_LDFLAGS}
 
 test_libbitcoin_explorer_test_LDADD = \
-    ${boost_LIBS} \
     ${src_libbitcoin_explorer_la_LIBS} \
     ${src_libbitcoin_explorer_la_LIBADD}
 
